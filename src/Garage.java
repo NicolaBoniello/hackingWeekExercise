@@ -1,27 +1,20 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Garage {
 
-    private List<VeicoloAMotore> posti = new ArrayList<>();
+    public VeicoloAMotore[] posti = new VeicoloAMotore[15];
 
-   /* public Garage(List<VeicoloAMotore> posti) {
-        this.posti = posti;
-    }*/
 
-    public List<VeicoloAMotore> getPosti() {
-        return posti;
-    }
-
-    public void setPosti(List<VeicoloAMotore> posti) {
-        this.posti = posti;
-    }
-
+    int postiOccupati = 0;
     public void aggiungiVeicolo(VeicoloAMotore veicoloAMotore){
-        posti.add(veicoloAMotore);
+        if (postiOccupati < posti.length){
+            posti[postiOccupati] = veicoloAMotore;
+            postiOccupati++;
+        } else System.out.println("garage is full");
     }
-
     public void rimuoviVeicolo(VeicoloAMotore veicoloAMotore){
-        posti.remove(veicoloAMotore);
+        Arrays.stream(posti).toList().remove(veicoloAMotore);
     }
 }
