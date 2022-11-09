@@ -20,3 +20,5 @@ public class Furgone extends VeicoloAMotore{
         return super.info() + " Capacità " + capacità;
     }
 }
+
+

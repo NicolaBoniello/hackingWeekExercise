@@ -3,11 +3,11 @@ import java.util.List;
 
 public class Garage {
 
-    private List<VeicoloAMotore> posti = new ArrayList<>(14);
+    private List<VeicoloAMotore> posti = new ArrayList<>();
 
-    public Garage(List<VeicoloAMotore> posti) {
+   /* public Garage(List<VeicoloAMotore> posti) {
         this.posti = posti;
-    }
+    }*/
 
     public List<VeicoloAMotore> getPosti() {
         return posti;
