@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Start {
     public static void main(String[] args) {
 
@@ -16,12 +18,15 @@ public class Start {
         garage.aggiungiVeicolo(furgone1);
         garage.aggiungiVeicolo(furgone2);
 
-        for (VeicoloAMotore posti:garage.getPosti()
-             ) {
-            System.out.println(garage.getPosti().size() + posti.info());
+        /**adding print info about garage method*/
+
+        for (VeicoloAMotore posti : garage.posti){
+            try {
+                System.out.println(posti.info());
+            } catch (Exception e) {
+                System.out.println("the other " + (15 - garage.postiOccupati) + " places are empty");
+                break;
+            }
         }
-
-
-
     }
 }

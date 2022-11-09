@@ -8,6 +8,7 @@ public class Garage {
 
 
     int postiOccupati = 0;
+    /** adding a method to add vehicles in garage*/
     public void aggiungiVeicolo(VeicoloAMotore veicoloAMotore){
         if (postiOccupati < posti.length){
             posti[postiOccupati] = veicoloAMotore;
