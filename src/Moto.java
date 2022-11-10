@@ -6,17 +6,18 @@ public class Moto extends VeicoloAMotore{
         super(marca, anno, cilindrata);
         this.tempi = tempi;
     }
+    @Override
+    public String info() {
+        return super.info() + " Tempi: " + tempi;
+    }
 
     public int getTempi() {
+
         return tempi;
     }
 
     public void setTempi(int tempi) {
-        this.tempi = tempi;
-    }
 
-    @Override
-    public String info() {
-        return super.info() + " Tempi: " + tempi;
+        this.tempi = tempi;
     }
 }

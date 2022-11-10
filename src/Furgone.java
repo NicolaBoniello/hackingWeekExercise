@@ -6,6 +6,10 @@ public class Furgone extends VeicoloAMotore{
         super(marca, anno, cilindrata);
         this.capacita = capacità;
     }
+    @Override
+    public String info() {
+        return super.info() + " Capacità " + capacita;
+    }
 
     public double getCapacità() {
         return capacita;
@@ -15,10 +19,7 @@ public class Furgone extends VeicoloAMotore{
         this.capacita = capacità;
     }
 
-    @Override
-    public String info() {
-        return super.info() + " Capacità " + capacita;
-    }
+
 }
 
 
