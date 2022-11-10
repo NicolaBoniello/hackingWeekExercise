@@ -1,3 +1,12 @@
+/**
+ * In questa classe sono state create delle istanze di oggetti nelle varie classi e aggiunti alla lista
+ *  con il metodo aggiungi veicolo vengono aggiunti i veicoli alla lista
+ *  con il metodo rimuovi veicolo vengono rimossi i veicoli dalla lista
+ * La classe che fa riferimento al main
+ * @author Fabrizio Trupia , Alessandro Trupia , Nicola Boniello , Andrea Sciscioli
+ * @version 1
+ */
+
 public class Start {
     public static void main(String[] args) {
 
@@ -17,11 +26,17 @@ public class Start {
         garage.aggiungiVeicolo(furgone1);
         garage.aggiungiVeicolo(furgone2);
 
+        /**
+         * Ciclo for each per stampare tutti gli elementi della lista
+         */
         for (VeicoloAMotore posti : garage.getPosti()){
             System.out.println(posti.info());
         }
+
         System.out.println("posti liberi = " + (15 - garage.getPostiOccupati()));
+
         System.out.println("-------------------------------------------------------------");
+
         System.out.println(garage.rimuoviVeicolo(2).info());
     }
 }
