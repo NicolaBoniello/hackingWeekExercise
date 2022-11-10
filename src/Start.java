@@ -20,7 +20,7 @@ public class Start {
 
         /**adding print info about garage method*/
 
-        for (VeicoloAMotore posti : garage.posti){
+        for (VeicoloAMotore posti : garage.getPosti()){
             try {
                 System.out.println(posti.info());
             } catch (Exception e) {
@@ -28,5 +28,6 @@ public class Start {
                 break;
             }
         }
+
     }
 }

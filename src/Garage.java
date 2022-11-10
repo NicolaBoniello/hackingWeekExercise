@@ -1,11 +1,19 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.UnaryOperator;
 
 public class Garage {
 
-    public VeicoloAMotore[] posti = new VeicoloAMotore[15];
+    private VeicoloAMotore[] posti = new VeicoloAMotore[15];
 
+    public VeicoloAMotore[] getPosti() {
+        return posti;
+    }
+
+    public void setPosti(VeicoloAMotore[] posti) {
+        this.posti = posti;
+    }
 
     int postiOccupati = 0;
     /** adding a method to add vehicles in garage*/
@@ -15,7 +23,9 @@ public class Garage {
             postiOccupati++;
         } else System.out.println("garage is full");
     }
-    public void rimuoviVeicolo(VeicoloAMotore veicoloAMotore){
-        Arrays.stream(posti).toList().remove(veicoloAMotore);
+    public Object rimuoviVeicolo(int veicoloAMotore){
+        Arrays.asList(posti).remove(veicoloAMotore);
+
+
     }
 }
