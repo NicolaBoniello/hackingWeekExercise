@@ -5,27 +5,26 @@ import java.util.function.UnaryOperator;
 
 public class Garage {
 
-    private VeicoloAMotore[] posti = new VeicoloAMotore[15];
+    private ArrayList<VeicoloAMotore> posti = new ArrayList<>();
 
-    public VeicoloAMotore[] getPosti() {
+    public ArrayList<VeicoloAMotore> getPosti() {
         return posti;
     }
 
-    public void setPosti(VeicoloAMotore[] posti) {
+    public void setPosti(ArrayList posti) {
         this.posti = posti;
     }
 
     int postiOccupati = 0;
     /** adding a method to add vehicles in garage*/
     public void aggiungiVeicolo(VeicoloAMotore veicoloAMotore){
-        if (postiOccupati < posti.length){
-            posti[postiOccupati] = veicoloAMotore;
+        if (postiOccupati < 15){
+            posti.add(veicoloAMotore);
             postiOccupati++;
         } else System.out.println("garage is full");
     }
-    public Object rimuoviVeicolo(int veicoloAMotore){
-        Arrays.asList(posti).remove(veicoloAMotore);
-
-
+    public VeicoloAMotore rimuoviVeicolo(int veicoloAMotore){
+        System.out.println("veicolo " + veicoloAMotore + " e stato prelevato");
+        return posti.remove(veicoloAMotore);
     }
 }
