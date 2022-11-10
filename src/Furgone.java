@@ -1,22 +1,24 @@
 public class Furgone extends VeicoloAMotore{
 
-    private double capacità;
+    private double capacita;
 
     public Furgone(String marca, String anno, double cilindrata, double capacità) {
         super(marca, anno, cilindrata);
-        this.capacità = capacità;
+        this.capacita = capacità;
     }
 
     public double getCapacità() {
-        return capacità;
+        return capacita;
     }
 
     public void setCapacità(double capacità) {
-        this.capacità = capacità;
+        this.capacita = capacità;
     }
 
     @Override
     public String info() {
-        return super.info() + " Capacità " + capacità;
+        return super.info() + " Capacità " + capacita;
     }
 }
+
+
